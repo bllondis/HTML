@@ -1,26 +1,12 @@
-/* ==========================================================================
-   PRICING CARDS — shared styles for index.html and jsx-version.html
-   ========================================================================== */
-
-
-/* --------------------------------------------------------------------------
-   RESET — removes browser defaults for consistent spacing
-   -------------------------------------------------------------------------- */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* --------------------------------------------------------------------------
-   PAGE — full-viewport canvas, warm off-white background
-   -------------------------------------------------------------------------- */
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f7f7f4;          /* page background */
+    background-color: #f7f7f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,12 +14,6 @@ body {
     padding: 20px;
 }
 
-
-/* --------------------------------------------------------------------------
-   LAYOUT — card row and card shell
-   -------------------------------------------------------------------------- */
-
-/* Horizontal row of cards, 24px gap between them */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -43,42 +23,33 @@ body {
     align-items: flex-start;
 }
 
-/* Single pricing card — fixed 320px width, min 380px tall */
 .card {
     display: flex;
     flex-direction: column;
     min-height: 380px;
-    background-color: #f2f1ed;          /* card surface */
+    background-color: #f2f1ed;
     border-radius: 4px;
     padding: 16px;
     width: 320px;
     flex-shrink: 0;
 }
 
-/* Top section — title, price, and feature list */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
-
-/* --------------------------------------------------------------------------
-   TYPOGRAPHY — plan name, price, and feature text
-   -------------------------------------------------------------------------- */
-
-/* Plan name — e.g. "Hobby", "Pro" */
 .card-title {
     font-size: 22px;
     line-height: 28px;
     font-weight: 400;
-    color: #26251e;                     /* primary text */
+    color: #26251e;
     margin-bottom: 8px;
 }
 
-/* Price row — holds amount + period side by side */
 .card-price {
     font-size: 20px;
-    color: rgba(38, 37, 30, 0.5);     /* muted text */
+    color: rgba(38, 37, 30, 0.5);
     display: inline-flex;
     align-items: baseline;
 }
@@ -94,22 +65,15 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
-/* Space below features, above the button */
 .card-content {
     margin-bottom: 32px;
 }
 
-/* "Includes:" / "Everything in Hobby, plus:" label */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
-
-
-/* --------------------------------------------------------------------------
-   FEATURES — checklist with checkmark icons
-   -------------------------------------------------------------------------- */
 
 .features-list {
     list-style: none;
@@ -131,18 +95,12 @@ body {
     font-weight: 400;
 }
 
-
-/* --------------------------------------------------------------------------
-   BUTTONS — pill-shaped CTAs at the bottom of each card
-   -------------------------------------------------------------------------- */
-
-/* Base button — shared shape, padding, and hover transition */
 .download-button {
-    margin-top: auto;                   /* pins button to card bottom */
+    margin-top: auto;
     width: fit-content;
-    background-color: #e6e5e0;          /* secondary default */
+    background-color: #e6e5e0;
     border: none;
-    border-radius: 999px;               /* full pill shape */
+    border-radius: 999px;
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -159,7 +117,6 @@ body {
     background-color: #D8D6CE;
 }
 
-/* Primary variant — dark CTA (e.g. "Get Pro") */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -173,10 +130,18 @@ body {
     background-color: #333;
 }
 
+.download-button.tetriary {
+    background-color: #e6e5e0;
+    color: #333;
+    border: 1px solid #aeadab;
+}
 
-/* --------------------------------------------------------------------------
-   PAGE LABEL — fixed badge showing which version you're viewing
-   -------------------------------------------------------------------------- */
+.download-button.tetriary:hover {
+    background-color: #D8D6CE;
+}
+.download-button.tetriary:active {
+    background-color: #e6e5e0;
+}
 
 .page-label {
     position: fixed;
